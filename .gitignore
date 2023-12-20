@@ -1,0 +1,25 @@
+# Binaries
+bin
+*.exe
+*.dll
+*.dylib
+*.so
+
+# Output
+*.o
+
+# Environment
+.env
+.env.local
+.env.development
+config.toml
+
+# Logs
+logs.json
+logs.txt
+
+# Tmp
+tmp
+
+# Swagger Docs
+docs

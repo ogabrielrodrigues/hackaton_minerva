@@ -1,0 +1,22 @@
+INSERT INTO "tb_employees" (name, email, sector, unit, administrator) 
+VALUES
+('Ana Silva', 'ana.silva@example.com', 'Administração', 'São Paulo', true),
+('Bruno Oliveira', 'bruno.oliveira@example.com', 'Informática', 'Rio de Janeiro', false),
+('Carla Santos', 'carla.santos@example.com', 'Mecânica', 'Belo Horizonte', false),
+('Daniel Costa', 'daniel.costa@example.com', 'Produção', 'Brasília', false),
+('Eduarda Pereira', 'eduarda.pereira@example.com', 'Frigorífico', 'Salvador', false),
+('Fernando Lima', 'fernando.lima@example.com', 'Administração', 'Porto Alegre', true),
+('Gabriela Rocha', 'gabriela.rocha@example.com', 'Informática', 'Fortaleza', false),
+('Henrique Almeida', 'henrique.almeida@example.com', 'Mecânica', 'Recife', false),
+('Isabela Santos', 'isabela.santos@example.com', 'Produção', 'Manaus', false),
+('João Souza', 'joao.souza@example.com', 'Frigorífico', 'Curitiba', false),
+('Laura Martins', 'laura.martins@example.com', 'Administração', 'Belém', true),
+('Lucas Oliveira', 'lucas.oliveira@example.com', 'Informática', 'Vitória', false),
+('Mariana Silva', 'mariana.silva@example.com', 'Mecânica', 'Natal', false),
+('Nathan Pereira', 'nathan.pereira@example.com', 'Produção', 'São Luís', false),
+('Olívia Lima', 'olivia.lima@example.com', 'Frigorífico', 'Campo Grande', false),
+('Pedro Santos', 'pedro.santos@example.com', 'Administração', 'João Pessoa', true),
+('Quitéria Almeida', 'quiteria.almeida@example.com', 'Informática', 'Aracaju', false),
+('Rafael Costa', 'rafael.costa@example.com', 'Mecânica', 'Teresina', false),
+('Sílvia Oliveira', 'silvia.oliveira@example.com', 'Produção', 'Florianópolis', false),
+('Thiago Martins', 'thiago.martins@example.com', 'Frigorífico', 'Cuiabá', false);
