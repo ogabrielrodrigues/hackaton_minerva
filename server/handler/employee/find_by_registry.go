@@ -14,14 +14,13 @@ import (
 // @Summary      Find one employee
 // @Description  Receive registry on url params to find one employee
 // @Tags         Employee
-// @Accept       json
 // @Produce      json
 // @Param        registry path string true "Request Param"
 // @Success      200  {object}  response.EmployeeResponse
 // @Failure      400  {object}  rest.RestErr
 // @Failure      404  {object}  rest.RestErr
 // @Failure      500  {object}  rest.RestErr
-// @Router       /employee/{registry} [get]
+// @Router       /api/v1/employee/{registry} [get]
 func (eh *employeeHandler) FindByRegistry(w http.ResponseWriter, r *http.Request) {
 	registry := chi.URLParam(r, "registry")
 
