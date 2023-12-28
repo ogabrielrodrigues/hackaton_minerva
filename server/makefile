@@ -8,7 +8,7 @@ MIGRATIONS_PATH=config/database/${DATABASE_DRIVER}/migration
 default: run
 
 docs:
-	@swag init -d "./" -g "cmd/main.go"
+	@swag init -q -d "./" -g "cmd/main.go"
 
 run: docs
 	@go run cmd/main.go
