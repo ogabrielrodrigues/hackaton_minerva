@@ -6,5 +6,6 @@ CREATE TABLE IF NOT EXISTS "tb_employees" (
   "email" TEXT UNIQUE NOT NULL,
   "sector" TEXT NOT NULL,
   "unit" TEXT NOT NULL,
-  "administrator" BOOLEAN NOT NULL DEFAULT FALSE
+  "administrator" BOOLEAN NOT NULL DEFAULT FALSE,
+  "password" TEXT NOT NULL
 );

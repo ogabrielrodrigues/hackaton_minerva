@@ -10,6 +10,7 @@ type config struct {
 	Port     string
 	Origin   string
 	Database string
+	JWT      string
 }
 
 var cfg *config
@@ -26,7 +27,8 @@ func Load() error {
 	cfg = &config{
 		Port:     viper.GetString("server.port"),
 		Origin:   viper.GetString("server.origin"),
-		Database: viper.GetString("server.database"),
+		Database: viper.GetString("server.database_url"),
+		JWT:      viper.GetString("server.jwt_secret"),
 	}
 
 	return nil
