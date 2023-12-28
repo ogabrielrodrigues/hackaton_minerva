@@ -11,9 +11,10 @@ type employeeHandler struct {
 }
 
 type EmployeeHandler interface {
-	Create(w http.ResponseWriter, r *http.Request)
-	List(w http.ResponseWriter, r *http.Request)
-	FindByRegistry(w http.ResponseWriter, r *http.Request)
+	Create(http.ResponseWriter, *http.Request)
+	List(http.ResponseWriter, *http.Request)
+	FindByRegistry(http.ResponseWriter, *http.Request)
+	Authenticate(http.ResponseWriter, *http.Request)
 }
 
 func NewEmployeeHandler(service service.EmployeeService) EmployeeHandler {

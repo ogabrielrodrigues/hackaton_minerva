@@ -11,9 +11,10 @@ type employeeRepository struct {
 }
 
 type EmployeeRepository interface {
-	Create(employee entity.Employee) (entity.Employee, *rest.RestErr)
+	Create(entity.Employee) (entity.Employee, *rest.RestErr)
 	List() ([]entity.Employee, *rest.RestErr)
 	FindByRegistry(string) (entity.Employee, *rest.RestErr)
+	Authenticate(entity.Employee) (entity.Employee, *rest.RestErr)
 }
 
 func NewEmployeeRepository(database database.DB) EmployeeRepository {

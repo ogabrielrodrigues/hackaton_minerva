@@ -23,7 +23,7 @@ import (
 // @Success      200  {object}  response.EmployeeResponse
 // @Failure      400  {object}  rest.RestErr
 // @Failure      500  {object}  rest.RestErr
-// @Router       /employee [post]
+// @Router       /api/v1/employee [post]
 func (eh *employeeHandler) Create(w http.ResponseWriter, r *http.Request) {
 	body := request.CreateEmployeeRequest{}
 
@@ -46,6 +46,7 @@ func (eh *employeeHandler) Create(w http.ResponseWriter, r *http.Request) {
 		body.Email,
 		body.Sector,
 		body.Unit,
+		body.Password,
 		body.Administrator,
 	)
 

@@ -14,6 +14,7 @@ type EmployeeService interface {
 	Create(employee entity.Employee) (entity.Employee, *rest.RestErr)
 	List() ([]entity.Employee, *rest.RestErr)
 	FindByRegistry(string) (entity.Employee, *rest.RestErr)
+	Authenticate(entity.Employee) (string, *rest.RestErr)
 }
 
 func NewEmployeeService(repository repository.EmployeeRepository) EmployeeService {
