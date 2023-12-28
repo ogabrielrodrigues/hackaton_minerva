@@ -53,3 +53,21 @@ func NewNotFoundErr(message string) *RestErr {
 		Causes:  nil,
 	}
 }
+
+func NewForbiddenErr(message string) *RestErr {
+	return &RestErr{
+		Message: message,
+		Code:    http.StatusForbidden,
+		Err:     "forbidden",
+		Causes:  nil,
+	}
+}
+
+func NewUnauthorizedErr() *RestErr {
+	return &RestErr{
+		Message: http.StatusText(http.StatusUnauthorized),
+		Code:    http.StatusUnauthorized,
+		Err:     "unauthorized",
+		Causes:  nil,
+	}
+}
