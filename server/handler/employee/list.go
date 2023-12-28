@@ -13,12 +13,11 @@ import (
 // @Summary      List all employees
 // @Description  List all employees of all sectors and all units
 // @Tags         Employee
-// @Accept       json
 // @Produce      json
 // @Success      200  {object}  []response.EmployeeResponse
 // @Failure      400  {object}  rest.RestErr
 // @Failure      500  {object}  rest.RestErr
-// @Router       /employee/list [get]
+// @Router       /api/v1/employee/list [get]
 func (eh *employeeHandler) List(w http.ResponseWriter, r *http.Request) {
 	employees, err := eh.service.List()
 	if err != nil {

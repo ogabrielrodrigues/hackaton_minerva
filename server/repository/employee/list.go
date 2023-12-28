@@ -12,34 +12,34 @@ func (er *employeeRepository) List() ([]entity.Employee, *rest.RestErr) {
 	}
 	defer conn.Close()
 
-	row, err := conn.Query(`SELECT * FROM "tb_employees"`)
+	rows, err := conn.Query(`SELECT * FROM "tb_employees"`)
 	if err != nil {
 		return nil, rest.NewInternalServerErr(err.Error())
 	}
 
-	var registry, name, email, sector, unit string
+	var registry, name, email, sector, unit, password string
 	var administrator bool
 
 	var employees []entity.Employee
 
-	for row.Next() {
-		if row.Err() != nil {
-			return nil, rest.NewInternalServerErr(err.Error())
-		}
+	for rows.Next() {
+		defer rows.Close()
 
-		if err := row.Scan(
+		if err := rows.Scan(
 			&registry,
 			&name,
 			&email,
 			&sector,
 			&unit,
 			&administrator,
+			&password,
 		); err != nil {
 			return nil, rest.NewInternalServerErr(err.Error())
 		}
 
-		employee := entity.NewEmployee(name, email, sector, unit, administrator)
+		employee := entity.NewEmployee(name, email, sector, unit, password, administrator)
 		employee.SetRegistry(registry)
+		employee.SetPassword(password)
 
 		employees = append(employees, employee)
 	}
