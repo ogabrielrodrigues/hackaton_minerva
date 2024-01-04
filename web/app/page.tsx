@@ -8,14 +8,17 @@ import { EmployeeFeedbacks } from '@/components/sections/employee_feedbacks'
 import { LoginSection } from '@/components/sections/login_section'
 import { FeedbacksSection } from '@/components/sections/feedbacks_section'
 
-export default async function HomePage() {
-  //  ADM
-  //  leandro@adm.minerva.com
-  //  leandrocury409*
+/**
+ * TEST: Admin
+ * email: admin@admin.minerva.com
+ * password: admin1
+ *
+ * TEST: Employee
+ * email: john@ti.minerva.com
+ * password: john01
+ * */
 
-  //  NE
-  //  carlos@ti.minerva.com
-  //  carlinpioi505*
+export default async function HomePage() {
   const { employee } = await GetEmployee()
 
   return (

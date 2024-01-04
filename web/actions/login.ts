@@ -4,8 +4,8 @@ import jwt from 'jsonwebtoken'
 import { api_url, jwt_secret } from '@/config/api'
 import { revalidatePath } from 'next/cache'
 
-import { JwtAuthPayload } from '@/app/types/jwt'
-import { Employee } from '@/app/types/employee'
+import { JwtAuthPayload } from '@/types/jwt'
+import { Employee } from '@/types/employee'
 import { cookies } from 'next/headers'
 
 export async function loginAction(_: any, fd: FormData) {
@@ -52,9 +52,4 @@ export async function loginAction(_: any, fd: FormData) {
   } catch (err) {
     return { success: false }
   }
-
-  // redirect(
-  //   `${base_url}/api/login?email=${body.email}&password=${body.password}`,
-  //   RedirectType.push
-  // )
 }

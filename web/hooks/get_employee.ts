@@ -1,4 +1,4 @@
-import { Employee } from '@/app/types/employee'
+import { Employee } from '@/types/employee'
 import { cookies } from 'next/headers'
 
 export async function GetEmployee() {

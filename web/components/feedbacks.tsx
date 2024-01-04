@@ -1,4 +1,4 @@
-import { Feedback as FeedbackType } from '@/app/types/feedback'
+import { Feedback as FeedbackType } from '@/types/feedback'
 import { api_url } from '@/config/api'
 import { GetEmployee } from '@/hooks/get_employee'
 import { Feedback } from './feedback'
