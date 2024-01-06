@@ -10,7 +10,10 @@ export function LoginSection() {
         <LoginForm />
       </div>
       <div className="h-1/3 flex items-end justify-center">
-        <Link href="/sign" className="text-primary font-medium">
+        <Link
+          href="/sign"
+          className="text-primary font-medium hover:bg-zinc-300/"
+        >
           Cadastro
         </Link>
       </div>

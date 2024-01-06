@@ -1,7 +1,7 @@
 INSERT INTO "tb_employees" (name, email, sector, unit, administrator, password) 
 VALUES
-('Admin', 'admin@admin.minerva.com', 'Administração', 'Barretos', true, MD5("admin1")),
-('John Doe', 'john@ti.minerva.com', 'Informática', 'Barretos', false, MD5("john01")),
+('Admin', 'admin@admin.minerva.com', 'Administração', 'Barretos', true, MD5('admin1')),
+('John Doe', 'john@ti.minerva.com', 'Informática', 'Barretos', false, MD5('john01')),
 ('Ana Silva', 'ana.silva@example.com', 'Administração', 'São Paulo', true, MD5('Lp7sK9')),
 ('Bruno Oliveira', 'bruno.oliveira@example.com', 'Informática', 'Rio de Janeiro', false, MD5('aR3dY8')),
 ('Carla Santos', 'carla.santos@example.com', 'Mecânica', 'Belo Horizonte', false, MD5('5qXbZr')),

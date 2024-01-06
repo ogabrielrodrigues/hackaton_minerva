@@ -48,8 +48,8 @@ export async function loginAction(_: any, fd: FormData) {
     })
 
     revalidatePath('/')
-    return { success: true }
+    return { success: 'success' }
   } catch (err) {
-    return { success: false }
+    return { success: 'error' }
   }
 }

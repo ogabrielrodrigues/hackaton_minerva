@@ -51,8 +51,9 @@ func answersRoutes() http.Handler {
 	ar.Group(func(r chi.Router) {
 		r.Use(middleware.AuthMiddleware)
 
-		r.Get("/", ai.List)
+		r.Get("/list", ai.List)
 		r.Post("/reply", ai.Reply)
+		r.Get("/{id}", ai.FindByID)
 	})
 
 	return ar

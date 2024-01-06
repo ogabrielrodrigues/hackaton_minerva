@@ -1,10 +1,4 @@
-import Link from 'next/link'
 import { GetEmployee } from '@/hooks/get_employee'
-import { Feedbacks } from '@/components/feedbacks'
-import { filterAction } from '@/actions/filter'
-import { LoginForm } from '@/components/forms/login_form'
-import { AdministratorFeedbacks } from '@/components/sections/administrator_feedbacks'
-import { EmployeeFeedbacks } from '@/components/sections/employee_feedbacks'
 import { LoginSection } from '@/components/sections/login_section'
 import { FeedbacksSection } from '@/components/sections/feedbacks_section'
 
@@ -16,7 +10,7 @@ import { FeedbacksSection } from '@/components/sections/feedbacks_section'
  * TEST: Employee
  * email: john@ti.minerva.com
  * password: john01
- * */
+ **/
 
 export default async function HomePage() {
   const { employee } = await GetEmployee()

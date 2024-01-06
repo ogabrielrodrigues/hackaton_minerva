@@ -4,8 +4,10 @@ import { loginAction } from '@/actions/login'
 import { useFormStatus } from 'react-dom'
 import { useFormState } from 'react-dom'
 
-const login_status = {
-  success: false,
+type Status = 'null' | 'error' | 'success'
+
+const login_status: { success: Status } = {
+  success: 'null',
 }
 
 function Submit() {
@@ -23,7 +25,7 @@ function Submit() {
 }
 
 export function LoginForm() {
-  const [, login_action] = useFormState(loginAction, login_status)
+  const [status, login_action] = useFormState(loginAction, login_status)
 
   return (
     <form action={login_action} className="flex flex-col gap-2">
@@ -35,7 +37,6 @@ export function LoginForm() {
           id="email"
           name="email"
           type="text"
-          // autoComplete="off"
           className="h-10 border border-zinc-200 rounded pl-2 outline-none focus:ring-2 focus:ring-primary transition-all"
           placeholder="Digite seu e-mail"
         />
@@ -53,6 +54,9 @@ export function LoginForm() {
         />
       </div>
       <Submit />
+      <p className="text-primary font-medium text-center mt-2">
+        {status.success == 'error' && 'E-mail ou senha incorretos'}
+      </p>
     </form>
   )
 }

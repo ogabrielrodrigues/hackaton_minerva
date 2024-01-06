@@ -13,6 +13,7 @@ type answerHandler struct {
 type AnswerHandler interface {
 	Reply(http.ResponseWriter, *http.Request)
 	List(http.ResponseWriter, *http.Request)
+	FindByID(http.ResponseWriter, *http.Request)
 }
 
 func NewAnswerHandler(service service.AnswerService) AnswerHandler {

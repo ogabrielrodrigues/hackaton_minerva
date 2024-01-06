@@ -4,6 +4,7 @@ bin
 *.dll
 *.dylib
 *.so
+hackaton-minerva
 
 # Output
 *.o

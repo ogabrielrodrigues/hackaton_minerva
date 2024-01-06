@@ -1,6 +1,6 @@
 .PHONY: default docs run clean build migrate_up migrate_down seed
 
-APP_NAME=hackton-minerva
+APP_NAME=hackaton-minerva
 DATABASE_DRIVER=postgres
 DATABASE_URL=$(shell grep -m 1 database config.toml | tr -s ' ' | tr -d '"' | tr -d "'" | cut -d' ' -f3)
 MIGRATIONS_PATH=config/database/${DATABASE_DRIVER}/migration
@@ -17,7 +17,7 @@ clean:
 	@rm -f bin/${APP_NAME}
 
 build: clean docs
-	@go build -C cmd -o ../bin/${APP_NAME}
+	@go build -C cmd -o ../${APP_NAME}
 
 migrate_up:
 	@docker-compose up -d

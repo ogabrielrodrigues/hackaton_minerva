@@ -13,6 +13,7 @@ type answerRepository struct {
 type AnswerRepository interface {
 	Reply(string, entity.Answer) (entity.Answer, *rest.RestErr)
 	List() ([]entity.Answer, *rest.RestErr)
+	FindByID(string) (entity.Answer, *rest.RestErr)
 }
 
 func NewAnswerRepository(database database.DB) AnswerRepository {
