@@ -1,21 +1,15 @@
 'use client'
 
 import { X } from 'lucide-react'
-import { Answer } from './answer'
+import { AnswerForm } from '../forms/answer_form'
 
 interface Props {
   open: boolean
-  answer_id: string
-  token: string
+  feedback_id: string
   toggleModal(): void
 }
 
-export function ViewAnswerModal({
-  open,
-  answer_id,
-  token,
-  toggleModal,
-}: Props) {
+export function AnswerModal({ open, feedback_id, toggleModal }: Props) {
   return (
     <div
       data-open={open}
@@ -33,8 +27,9 @@ export function ViewAnswerModal({
             <X />
           </button>
         </div>
-        <h2 className="text-4xl font-bold text-primary">Resposta</h2>
-        <Answer answer_id={answer_id} token={token} />
+        <h2 className="text-4xl font-bold text-primary">Responder</h2>
+
+        <AnswerForm feedback_id={feedback_id} toggleModal={toggleModal} />
       </section>
     </div>
   )

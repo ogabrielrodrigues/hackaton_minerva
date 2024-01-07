@@ -3,6 +3,7 @@ import { GetEmployee } from '@/hooks/get_employee'
 import { Feedback } from './feedback'
 import { GetToken } from '@/hooks/get_token'
 import { Employee } from '@/types/employee'
+import { FeedbackForm } from './forms/feedback_form'
 
 export async function EmployeeFeedbacks() {
   const { token } = await GetToken()
@@ -18,6 +19,7 @@ export async function EmployeeFeedbacks() {
 
   return (
     <>
+      <FeedbackForm />
       {feedbacks?.length != 0 ? (
         <ul className="flex flex-col gap-2 overflow-y-scroll last:mb-12">
           {feedbacks?.map(feedback => (

@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { AnswerModal } from './answer_modal'
+import { AnswerModal } from './modal/answer_modal'
 
 interface Modal {
   open: boolean

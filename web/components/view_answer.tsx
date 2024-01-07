@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { ViewAnswerModal } from './view_answer_modal'
+import { ViewAnswerModal } from './modal/view_answer_modal'
 
 interface Modal {
   open: boolean
