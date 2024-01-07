@@ -37,6 +37,7 @@ export async function AdminFeedbacks() {
               key={feedback.id}
               id={feedback.id}
               administrator={true}
+              answered={feedback.answered}
               answer_id={feedback.answer_id}
               employee_registry={feedback.employee_registry}
               content={feedback.content}
