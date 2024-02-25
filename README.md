@@ -18,7 +18,7 @@
 
 <br>
 
-## Desafio resolvido: N° 2 📦
+## Desafio resolvido: N° 3 📦
 
 #### O desafio foi solucionado com um front-end usando NextJS 14 e TailwindCSS. O back-end, consiste em uma API REST usando Go, PostgreSQL e Docker.
 
